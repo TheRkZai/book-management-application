@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: BookManage - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/BookManage.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Administrator\桌面\沐超数据库课程设计\源代码\VendManage.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/BookManage.pdb" /debug /machine:I386 /out:"Debug/BookManage.exe" /pdbtype:sept 
+".\Debug\BookManage.obj"
+".\Debug\BookManageDlg.obj"
+".\Debug\Login.obj"
+".\Debug\RefundDlg1.obj"
+".\Debug\RefundDlg2.obj"
+".\Debug\RefundManage.obj"
+".\Debug\StasticDlg1.obj"
+".\Debug\StasticDlg2.obj"
+".\Debug\StasticDlg3.obj"
+".\Debug\StasticManage.obj"
+".\Debug\StdAfx.obj"
+".\Debug\StockDlg1.obj"
+".\Debug\StockDlg2.obj"
+".\Debug\StockManage.obj"
+".\Debug\VendDlg.obj"
+".\Debug\VendManage.obj"
+".\Debug\BookManage.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10.tmp"
+<h3>Output Window</h3>
+Compiling...
+VendManage.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP11.tmp" with contents
+[
+/nologo /o"Debug/BookManage.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\BookManage.sbr"
+".\Debug\BookManageDlg.sbr"
+".\Debug\Login.sbr"
+".\Debug\RefundDlg1.sbr"
+".\Debug\RefundDlg2.sbr"
+".\Debug\RefundManage.sbr"
+".\Debug\StasticDlg1.sbr"
+".\Debug\StasticDlg2.sbr"
+".\Debug\StasticDlg3.sbr"
+".\Debug\StasticManage.sbr"
+".\Debug\StockDlg1.sbr"
+".\Debug\StockDlg2.sbr"
+".\Debug\StockManage.sbr"
+".\Debug\VendDlg.sbr"
+".\Debug\VendManage.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP11.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+BookManage.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

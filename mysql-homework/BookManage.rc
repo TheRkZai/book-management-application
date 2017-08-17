@@ -1,0 +1,808 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BookManage.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BookManage.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 图书销售管理系统"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "图书销售管理系统 ",IDC_STATIC,44,13,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 2015",IDC_STATIC,44,31,174,8
+    DEFPUSHBUTTON   "确定",IDOK,172,9,50,14,WS_GROUP
+    LTEXT           "劳嘉辉   计科一班   13349051",IDC_STATIC,44,49,113,8
+    LTEXT           "陈土丽   计科一班   13349011",IDC_STATIC,44,68,113,8
+END
+
+IDD_BOOKMANAGE_DIALOG DIALOGEX 0, 0, 207, 139
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "图书管理"
+MENU IDR_MAINMENU
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_OPERA_STATIC,16,125,189,12
+    PUSHBUTTON      "进货管理",IDC_BUTTON_STOCK,24,28,56,16
+    PUSHBUTTON      "退货管理",IDC_BUTTON_REFUND,24,62,56,16
+    PUSHBUTTON      "销售管理",IDC_BUTTON_VEND,123,28,56,16
+    PUSHBUTTON      "销售统计",IDC_BUTTON_DATA,123,62,56,16
+    PUSHBUTTON      "用户管理",IDC_BUTTON_USER,24,96,56,16
+    PUSHBUTTON      "备份&恢复",IDC_BUTTON_BACKUP,123,96,56,16
+END
+
+IDD_LOGIN_DIALOG DIALOGEX 0, 0, 126, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "图书管理系统登陆"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "登录信息",IDC_STATIC,8,11,114,72
+    LTEXT           "用户名",IDC_STATIC,16,24,40,8
+    LTEXT           "密码",IDC_STATIC,16,46,40,8
+    EDITTEXT        IDC_NAME,49,22,64,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CODE,49,43,64,12,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "退出(&C)",IDC_QUIT,17,66,42,13
+    PUSHBUTTON      "登陆(&L)",IDC_OK,68,66,43,13,0,WS_EX_STATICEDGE
+END
+
+IDD_STOCK_DIALOG DIALOGEX 0, 0, 246, 204
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "进货管理"
+MENU IDR_STOCKMENU
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "Tab1",IDC_STOCK_TAB,"SysTabControl32",0x0,2,2,242,200
+END
+
+IDD_STOCK_DIALOG1 DIALOG 0, 0, 229, 130
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "System"
+BEGIN
+    CONTROL         "List1",IDC_STOCK_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,8,225,120
+END
+
+IDD_STOCK_DIALOG2 DIALOGEX 0, 0, 254, 180
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_STATIC,2,2,250,52
+    CONTROL         "List2",IDC_SUPPLY_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,54,250,77
+    LTEXT           "图书名",IDC_STATIC,120,13,33,8
+    EDITTEXT        IDC_STOCK_NAME,153,12,58,12,ES_AUTOHSCROLL
+    LTEXT           "出版社",IDC_STATIC,8,28,25,8
+    EDITTEXT        IDC_STOCK_SUPPLY,37,26,57,12,ES_AUTOHSCROLL
+    LTEXT           "供货价",IDC_STATIC,8,42,36,8
+    EDITTEXT        IDC_STOCK_PRICE,36,40,58,12,ES_AUTOHSCROLL
+    LTEXT           "供应数量",IDC_STATIC,120,41,36,8
+    EDITTEXT        IDC_STOCK_COUNT,153,40,58,12,ES_AUTOHSCROLL
+    LTEXT           "ISBN",IDC_STATIC,8,14,22,8
+    EDITTEXT        IDC_STOCK_ISBN,37,12,57,12,ES_AUTOHSCROLL
+    LTEXT           "作者",IDC_STATIC,120,27,29,9
+    EDITTEXT        IDC_STOCK_AUTHOR,153,26,58,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "添加供货记录",IDC_BUTTON_STOCK_ADD,10,136,50,14,BS_NOTIFY
+    PUSHBUTTON      "删除供货记录",IDC_BUTTON_STOCK_SUB,89,136,50,14
+    PUSHBUTTON      "保存供货信息",IDC_BUTTON_STOCK_SAVE,168,137,50,14
+    PUSHBUTTON      "查询当前供应",IDC_BUTTON_STOCK_QUERY,10,156,50,14
+    PUSHBUTTON      "确定进货",IDC_BUTTON_STOCK_CONFIRM,89,156,50,14
+    PUSHBUTTON      "清空列表",IDC_BUTTON_CLEAR,168,156,50,14
+END
+
+IDD_REFUND_DIALOG DIALOG 0, 0, 202, 139
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "退货管理"
+MENU IDR_REFUNDMENU
+FONT 10, "System"
+BEGIN
+    CONTROL         "Tab1",IDC_REFUND_TAB,"SysTabControl32",0x0,2,2,198,135
+END
+
+IDD_REFUND_DIALOG1 DIALOGEX 0, 0, 128, 93
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "退货信息",IDC_STATIC,8,8,108,53
+    LTEXT           "ISBN",IDC_STATIC,12,22,37,9
+    EDITTEXT        IDC_REFUND_ISBN,48,21,59,12,ES_AUTOHSCROLL
+    LTEXT           "退货数量",IDC_STATIC,11,45,37,9
+    EDITTEXT        IDC_REFUND_COUNT,48,43,59,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "提交清单",IDC_REFUND_ENTER,9,68,46,14
+    PUSHBUTTON      "清空",IDC_REFUND_CLEAR,68,68,46,14
+END
+
+IDD_REFUND_DIALOG2 DIALOGEX 0, 0, 191, 111
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_REFUND_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,7,187,102
+END
+
+IDD_DATA_DIALOG DIALOGEX 0, 0, 261, 164
+STYLE DS_ABSALIGN | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "图书销售统计"
+MENU IDR_STASTICMENU
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "Tab1",IDC_STASTIC_TAB,"SysTabControl32",0x0,2,1,257,160
+END
+
+IDD_VEND_DIALOG2 DIALOGEX 0, 0, 242, 131
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU
+CAPTION "销售记录"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_VEND_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,3,238,125
+END
+
+IDD_DATA_DIALOG1 DIALOGEX 0, 0, 242, 135
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_VENDBYMONTH_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,8,238,125
+END
+
+IDD_DATA_DIALOG2 DIALOG 0, 0, 242, 135
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "System"
+BEGIN
+    CONTROL         "List1",IDC_VENDS_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,8,238,125
+END
+
+IDD_VEND_DIALOG DIALOGEX 0, 0, 265, 195
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "销售控制台"
+MENU IDR_VENDMENU
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_STORAGE_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,11,259,91
+    GROUPBOX        "现有图书信息",IDC_STATIC,2,2,259,81
+    GROUPBOX        "已选择图书",IDC_STATIC,2,106,259,84
+    CONTROL         "List1",IDC_PUCHE_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,115,259,75
+END
+
+IDD_VEND_DIALOG1 DIALOG 0, 0, 133, 50
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "提示!"
+FONT 10, "System"
+BEGIN
+    LTEXT           "请输入要购买的数量",IDC_STATIC,8,12,73,10
+    EDITTEXT        IDC_PUCHECOUNT,86,8,39,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDC_OK,18,29,36,14
+    PUSHBUTTON      "取消",IDC_CANCEL,82,29,38,14
+END
+
+IDD_VEND_DIALOG3 DIALOGEX 0, 0, 171, 116
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入查询信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,28,90,50,14
+    PUSHBUTTON      "取消",IDCANCEL,94,89,50,14
+    LTEXT           "作者名",IDC_STATIC,28,26,25,8
+    LTEXT           "书名",IDC_STATIC,36,44,17,8
+    LTEXT           "出版社",IDC_STATIC,28,64,25,8
+    EDITTEXT        IDC_EDIT_AUTHOR,63,23,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BOOKNAME,63,41,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_C,63,62,53,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_USER_INFO DIALOGEX 0, 0, 207, 131
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户基本信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,140,40,50,14
+    LTEXT           "Static",IDC_STATIC_NAME,24,32,79,8
+    LTEXT           "Static",IDC_STATIC_PASS,24,51,79,8
+    LTEXT           "Static",IDC_STATIC_RANK,24,72,79,8
+    PUSHBUTTON      "修改用户名",IDC_BUTTON_CHANGE_USERNAME,16,100,50,14
+    PUSHBUTTON      "修改密码",IDC_BUTTON_PASS,78,100,50,14
+    PUSHBUTTON      "注册",IDC_BUTTON_REGISTER,140,100,50,14
+    PUSHBUTTON      "取消",IDCANCEL2,140,69,50,14
+END
+
+IDD_DIALOG_NEW_USERNAME DIALOGEX 0, 0, 203, 76
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "请输入新用户名"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,31,50,50,14
+    LTEXT           "请输入新用户名：",IDC_STATIC,20,25,65,8
+    PUSHBUTTON      "取消",IDCANCEL2,113,50,50,14
+    EDITTEXT        IDC_EDIT_NEW_NAME,87,22,86,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_NEW_PASSWORD DIALOGEX 0, 0, 209, 93
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "请输入新密码"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,25,61,50,14
+    LTEXT           "请输入新密码：",IDC_STATIC,19,39,57,8
+    PUSHBUTTON      "取消",IDCANCEL2,127,61,50,14
+    EDITTEXT        IDC_EDIT_NEW_PASS,84,37,84,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_CREATE DIALOGEX 0, 0, 179, 164
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "注册新用户"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,35,122,50,14
+    PUSHBUTTON      "取消",IDCANCEL,103,122,50,14
+    LTEXT           "输入用户名：",IDC_STATIC,33,35,49,8
+    EDITTEXT        IDC_EDIT_USER,90,33,72,14,ES_AUTOHSCROLL
+    LTEXT           "输入密码：",IDC_STATIC,33,58,41,8
+    EDITTEXT        IDC_EDIT_PASS,89,56,72,14,ES_AUTOHSCROLL
+    LTEXT           "选择职位",IDC_STATIC,33,82,33,8
+    COMBOBOX        IDC_COMBO_RANK,87,81,75,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_BACKUP DIALOGEX 0, 0, 199, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "备份与恢复"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,31,65,50,14
+    PUSHBUTTON      "取消",IDCANCEL,114,65,50,14
+    PUSHBUTTON      "恢复",IDC_BUTTON_RESTORE,112,20,50,37
+    PUSHBUTTON      "备份",IDC_BUTTON_SAVE,31,20,50,37
+END
+
+IDD_DIALOG_SAVE DIALOGEX 0, 0, 263, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "保存数据库"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,56,103,50,14
+    PUSHBUTTON      "取消",IDCANCEL,150,103,50,14
+    LTEXT           "请先输入备份路径，再点击备份按钮！",IDC_STATIC,62,15,137,8
+    LTEXT           "",IDC_STATIC_PATH,62,37,136,40
+    PUSHBUTTON      "选择路径",IDC_BUTTON_SAVE_PATH,55,82,50,14
+    PUSHBUTTON      "开始备份",IDC_BUTTON_SAVE_START,151,82,50,14
+END
+
+IDD_DIALOG_LOAD DIALOGEX 0, 0, 263, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "备份数据库"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,56,103,50,14
+    PUSHBUTTON      "取消",IDCANCEL,150,103,50,14
+    LTEXT           "请确认选择路径包含各bak文件，再点击恢复按钮！",IDC_STATIC,62,15,180,8
+    LTEXT           "",IDC_STATIC_PATH_LOAD,62,37,136,40
+    PUSHBUTTON      "选择路径",IDC_BUTTON_LOAD_PATH,55,82,50,14
+    PUSHBUTTON      "开始恢复",IDC_BUTTON_LOAD_START,151,82,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "图书销售管理系统"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "图书管理"
+            VALUE "LegalCopyright", "版权所有 (C) 2006"
+            VALUE "OriginalFilename", "图书管理.EXE"
+            VALUE "ProductName", "BookManage 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 233
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_BOOKMANAGE_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 205
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_LOGIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 125
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_STOCK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 244
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_STOCK_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 227
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_STOCK_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 252
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_REFUND_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 200
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_REFUND_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 126
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_REFUND_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_DATA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 259
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_VEND_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 240
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_DATA_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 240
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_DATA_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 240
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_VEND_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_VEND_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 131
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VEND_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_DIALOG_USER_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_DIALOG_NEW_USERNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_DIALOG_NEW_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_DIALOG_CREATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_DIALOG_BACKUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG_SAVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_DIALOG_LOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "进货(&I)  "
+    BEGIN
+        MENUITEM "查看进货记录(&J)\tCtrl+J",          ID_STOCK_RECORD
+        MENUITEM "供应商报价(&B)\tCtrl+B",           ID_SUPPLY_PRICE
+    END
+    POPUP "退货(&R)  "
+    BEGIN
+        MENUITEM "办理退货(&P)\tCtrl+P",            ID_REFUND_OPERA
+        MENUITEM "查看退货记录(&C)\tCtrl+C",          ID_REFUND_RECORD
+    END
+    POPUP "统计(&S) "
+    BEGIN
+        MENUITEM "查看月销售量(&M)\tCtrl+M",          ID_VEND_BYMONTH
+        MENUITEM "查看销售排行榜(&L)\tCtrl+L",         ID_VEND_LIST
+    END
+    POPUP "销售(&V)  "
+    BEGIN
+        MENUITEM "进入销售控制台(&S)\tCtrl+S",         ID_VEND_CONSOLE
+        MENUITEM "查看销售记录(&R)\tCtrl+R",          ID_VEND_RECORD
+    END
+    POPUP "用户"
+    BEGIN
+        MENUITEM "关于 图书管理(&A)",                 ID_ABOUT
+        MENUITEM "用户基本信息",                      ID_USER
+    END
+END
+
+IDR_STOCKMENU MENU
+BEGIN
+    POPUP "操作  "
+    BEGIN
+        MENUITEM "刷新",                          ID_REFRESH
+        MENUITEM "退出",                          ID_EXIT
+    END
+END
+
+IDR_REFUNDMENU MENU
+BEGIN
+    POPUP "操作"
+    BEGIN
+        MENUITEM "退出",                          ID_EXIT
+    END
+END
+
+IDR_VENDMENU MENU
+BEGIN
+    POPUP "交易  "
+    BEGIN
+        MENUITEM "添加到选书单",                      ID_ADDBOOK
+        MENUITEM "从选书单中删除",                     ID_MINUSBOOK
+        MENUITEM "确认购买",                        ID_PUCHE
+        MENUITEM "清空订单 ",                       ID_CLEAR
+    END
+    POPUP "操作  "
+    BEGIN
+        MENUITEM "查询",                          ID_FIND
+        MENUITEM "刷新",                          ID_REFRESH_DATA
+        MENUITEM "退出",                          ID_EXIT
+    END
+END
+
+IDR_STASTICMENU MENU
+BEGIN
+    POPUP "操作"
+    BEGIN
+        MENUITEM "月销量",                         ID_MONTH
+        MENUITEM "销售排行榜",                       ID_RANK
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_REFUND_DIALOG2 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_BOOKMANAGE_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_LOGIN_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_REFUND_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_VEND_DIALOG2 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DATA_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_VEND_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_VEND_DIALOG3 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_STOCK_DIALOG2 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DATA_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_USER_INFO AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_NEW_USERNAME AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_NEW_PASSWORD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_CREATE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_STOCK_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_BACKUP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_SAVE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_LOAD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "R",            ID_VEND_RECORD,         VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_VEND_CONSOLE,        VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_VEND_BYMONTH,        VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_VEND_LIST,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_REFUND_OPERA,        VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_REFUND_RECORD,       VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_SUPPLY_PRICE,        VIRTKEY, CONTROL, NOINVERT
+    "J",            ID_STOCK_RECORD,        VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 图书管理(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\BookManage.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
